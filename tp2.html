@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="fr">
+    <head> 
+        <title>Jeu du pendu</title> 
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="tp2.css">
+    </head> 
+    <body> 
+
+        <div class="popup" id="gamePopup">
+            <div class="title" id="popupPhrase">Vous avez ....... souhaitez vous rejouer ?</div>
+            
+            <div class="buttons">
+                <div class="button-yes" onclick="replayGame()">Oui</div>
+                <div class="button-no" onclick="popup();">Non</div>
+            </div>
+        </div>
+       
+        <div class="game-container">
+            <div class="game-title">Jeu du pendu</div>
+            <div class="game-desc">Vous devez trouver le mot en faisant moins de 11 erreurs</div>
+            <div class="win-count" id="wins"><b>Victoires consécutives: 0</b></div>
+            <div class="game-interface">
+                <div class="word" id="word"><br></div>
+                <div class="health"><u>Vies restantes</u><br><br>
+                    <div id="health">11</div>
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class="letter" id="A" onClick="letterClicked(this.id)">A</div>
+                <div class="letter" id="B" onClick="letterClicked(this.id)">B</div>
+                <div class="letter" id="C" onClick="letterClicked(this.id)">C</div>
+                <div class="letter" id="D" onClick="letterClicked(this.id)">D</div>
+                <div class="letter" id="E" onClick="letterClicked(this.id)">E</div>
+                <div class="letter" id="F" onClick="letterClicked(this.id)">F</div>
+                <div class="letter" id="G" onClick="letterClicked(this.id)">G</div>
+                <div class="letter" id="H" onClick="letterClicked(this.id)">H</div>
+                <div class="letter" id="I" onClick="letterClicked(this.id)">I</div>
+                <div class="letter" id="J" onClick="letterClicked(this.id)">J</div>
+                <div class="letter" id="K" onClick="letterClicked(this.id)">K</div>
+                <div class="letter" id="L" onClick="letterClicked(this.id)">L</div>
+                <div class="letter" id="M" onClick="letterClicked(this.id)">M</div>
+                <div class="letter" id="N" onClick="letterClicked(this.id)">N</div>
+                <div class="letter" id="O" onClick="letterClicked(this.id)">O</div>
+                <div class="letter" id="P" onClick="letterClicked(this.id)">P</div>
+                <div class="letter" id="Q" onClick="letterClicked(this.id)">Q</div>
+                <div class="letter" id="R" onClick="letterClicked(this.id)">R</div>
+                <div class="letter" id="S" onClick="letterClicked(this.id)">S</div>
+                <div class="letter" id="T" onClick="letterClicked(this.id)">T</div>
+                <div class="letter" id="U" onClick="letterClicked(this.id)">U</div>
+                <div class="letter" id="V" onClick="letterClicked(this.id)">V</div>
+                <div class="letter" id="W" onClick="letterClicked(this.id)">W</div>
+                <div class="letter" id="X" onClick="letterClicked(this.id)">X</div>
+                <div class="letter" id="Y" onClick="letterClicked(this.id)">Y</div>
+                <div class="letter" id="Z" onClick="letterClicked(this.id)">Z</div>
+            </div>
+        </div>
+
+        
+        
+
+        <script src="tp2.js"></script>
+    </body>   
+</html>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(247, 247, 247);
+    width: 100vw;
+}
+
+.game-container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.game-title {
+    font-size: 2.3rem;
+    color: rgb(58, 65, 228);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+}
+
+.game-desc {
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.game-interface {
+
+    width: 70vw;
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.word {
+    font-size: 1.8rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+}
+
+.health {
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color: rgb(58, 65, 228);
+}
+
+.keyboard {
+    width: 45vw;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.letter {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(58, 65, 228);
+    text-align: center;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.letter-found {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(32, 35, 121);
+    text-align: center;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.win-count {
+    margin-top: 40px;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+  
+  /* The actual popup (appears on top) */
+.popup {
+    visibility: hidden;
+    width: 40vw;
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px 0;
+    position: absolute;
+    top: 35vh;
+    left: 30vw;
+    z-index: 1;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+  
+
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+.title {
+    margin-top: 8vh;
+    font-size: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color: rgb(58, 65, 228);
+}
+
+.buttons {
+    margin-top: 8vh;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.button-yes {
+    background-color: rgb(58, 65, 228);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-no {
+    background-color: rgb(32, 35, 121);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
