@@ -40,6 +40,8 @@ function letterClicked(clickedID) {
     let found = false;
     let victory = true;
 
+    
+
     if(health >= 1 && document.getElementById(clickedID).classList.contains("letter")) {
         for(let i = 0; i < pickedWord.length; i++) {
             if(pickedWord[i] == clickedID) {
@@ -64,10 +66,11 @@ function letterClicked(clickedID) {
                 popup();
                 document.getElementById("word").innerHTML = "<br>" + pickedWord;
             }
-        } else {
-            document.getElementById(clickedID).classList.add("letter-found");
-            document.getElementById(clickedID).classList.remove("letter");
         }
+            
+        document.getElementById(clickedID).classList.add("letter-found");
+        document.getElementById(clickedID).classList.remove("letter");
+        
 
         if(victory) {
             winCounter++;
@@ -78,6 +81,17 @@ function letterClicked(clickedID) {
 
     }
 }
+
+document.addEventListener('keypress', (event) => {
+
+    var letter = event.key;
+    var alpha = /[ a-zA-Z]/;
+    if (alpha.test(letter)) {
+        letterClicked(letter.toUpperCase());
+    }
+
+}, false);
+
 
 function replayGame() {
     initGame();
